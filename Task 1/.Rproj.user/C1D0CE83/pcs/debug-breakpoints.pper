@@ -1,0 +1,66 @@
+{
+    "debugBreakpointsState": {
+        "breakpoints": [
+            {
+                "id": 2,
+                "path": "~/Desktop/R for Public Policy/Assignment/Task 1/PubPol477577Task1.R",
+                "line_number": 46,
+                "function_steps": "",
+                "function_name": "toplevel",
+                "state": 1,
+                "editor_state": 1,
+                "editor_line_number": 46,
+                "is_pending_debug_completion": false,
+                "needs_updated_steps": false,
+                "type": 1,
+                "is_package_breakpoint": false,
+                "package_name": ""
+            },
+            {
+                "id": 6,
+                "path": "~/Desktop/R for Public Policy/Assignment/Task 1/PubPol477577Task1.R",
+                "line_number": 51,
+                "function_steps": "",
+                "function_name": "toplevel",
+                "state": 1,
+                "editor_state": 1,
+                "editor_line_number": 51,
+                "is_pending_debug_completion": false,
+                "needs_updated_steps": false,
+                "type": 1,
+                "is_package_breakpoint": false,
+                "package_name": ""
+            },
+            {
+                "id": 7,
+                "path": "~/Desktop/R for Public Policy/Assignment/Task 1/PubPol477577Task1.R",
+                "line_number": 72,
+                "function_steps": "",
+                "function_name": "toplevel",
+                "state": 1,
+                "editor_state": 1,
+                "editor_line_number": 72,
+                "is_pending_debug_completion": false,
+                "needs_updated_steps": false,
+                "type": 1,
+                "is_package_breakpoint": false,
+                "package_name": ""
+            },
+            {
+                "id": 8,
+                "path": "~/Desktop/R for Public Policy/Assignment/Task 1/PubPol477577Task1.R",
+                "line_number": 73,
+                "function_steps": "",
+                "function_name": "toplevel",
+                "state": 1,
+                "editor_state": 1,
+                "editor_line_number": 73,
+                "is_pending_debug_completion": false,
+                "needs_updated_steps": false,
+                "type": 1,
+                "is_package_breakpoint": false,
+                "package_name": ""
+            }
+        ]
+    }
+}

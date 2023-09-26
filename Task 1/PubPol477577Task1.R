@@ -1,0 +1,80 @@
+#################################
+# R for Public Policy
+# Task 1 - Getting Started in R
+# Assignment 1
+# Zhonghan Xie
+# 2023-9-16
+#################################
+
+# The current workding directory is below
+getwd()
+# "/Users/jonasxie/Desktop/R for Public Policy/Assignment/Task 1"
+
+#q4
+?as.numeric() # package {base}
+?plot()       # package {graphics}
+?lm()         # package {stats}
+
+#q5
+vec_int <- c(1L,2L,3L,4L,5L)
+vec_chr <- c("a","b","c","d","e")
+vec_num <- c(1,2,3,4,5)
+vec_a <- c("f","g","h","i","j")
+vec_b <- c(6,7,8,9,10)
+list_a <- list("vec_int"=vec_int,"vec_chr"=vec_chr,"vec_num"=vec_num,
+               "vec_a"=vec_a,"vec_b"=vec_b,list="Lists can hold anything!")
+str(list_a) #Examining the structure of the list
+#The name of the vectors: 
+# $ vec_int: integer vector:
+# $ vec_chr: character vector
+# $ vec_num: numeric vector
+# $ vec_a: character vector
+# $ vec_b: numeric vector
+# $ list: character
+
+#q7
+df_a = data.frame("vec_int"=vec_int,"vec_chr"=vec_chr,"vec_num"=vec_num,
+                  "vec_a"=vec_a,"vec_b"=vec_b)
+str(df_a) # Examining the data structure of the data frame
+# $ vec_int: integer vector:
+# $ vec_chr: character vector
+# $ vec_num: numeric vector
+# $ vec_a: character vector
+# $ vec_b: numeric vector
+
+#q8
+matrix_a = cbind(vec_int,vec_chr,vec_num,vec_a,vec_b)
+#The mode of the matrix is 5.
+
+#q9
+# Clear all objects in the workspace before load the image.
+load("PubPol477577Task1Example.Rdata")
+
+#The class and type of the objects
+class(OBJECT1)
+typeof(OBJECT1)
+#The class of OBJECT1 is data frame. The type is list.
+class(OBJECT2)
+typeof(OBJECT2)
+#The class of OBJECT2 is lm, linear model. The type is list.
+
+#The dimension or length of objects
+dim(OBJECT1)
+length(OBJECT1)
+#The dimension of OBJECT1 is 167*2
+#The length is 2
+
+dim(OBJECT2)
+length(OBJECT2)
+#The dimension of OBJECT2 is NULL. It has no dimension.
+#The length of OBJECT2 is 2.
+
+names(OBJECT1)
+names(OBJECT2)
+#The name of subjects of OBJECT1: "age", "length"
+#The name of subjects of OBJECT2: "coefficients", "residuals", "effects", "rank", "fitted.values" 
+#"assign", "qr", "df.residual", "xlevels", "call", "terms", "model" 
+
+##Save the Project
+save.image("PubPol477577Task1.Rdata")
+
