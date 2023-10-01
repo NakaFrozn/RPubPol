@@ -39,9 +39,37 @@ AIRBAGS <- AIRBAGS %>%
 FUELECON <- FUELECON %>%
             mutate(comb = 0.55*cty+0.45*hwy)
 
+#generate classavghwy and classavgcty
 FUELECON <- FUELECON %>%
             group_by(year,class) %>%
             mutate(classavghwy = mean(hwy, na.rm=T)) %>%
             mutate(classavgcty = mean(cty, na.rm=T)) %>%
             ungroup()
+
+#generate combavg
+FUELECON <- FUELECON %>%
+            group_by(year) %>%
+            mutate(combavg = mean(comb)) %>%
+            ungroup()
+
+## WAGES
+# generate L_LWAGE
+WAGES <- WAGES %>%
+          group_by(ID) %>%
+          mutate(L_LWAGE = lag(LWAGE))
+
+# generate TOTEARN
+# Because we group_by(ID) in previous codes, so we don't need to group_by()
+# in this step.
+WAGES <- WAGES %>%
+          mutate(TOTEARN = cumsum(WKS*LWAGE)) 
+
+
+
+# generate LWAGE_DIF, which is the difference between LWAGE and L_LWAGE
+# i.e., LWAGE_DIF = LWAGE - L_LWAGE
+WAGES <- WAGES %>%
+        ungroup() %>%
+        mutate(LWAGE_DIF = LWAGE - L_LWAGE)
+
 
